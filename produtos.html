@@ -1,0 +1,4226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Axyon Clean - Catálogo completo de produtos de limpeza profissional">
+    <meta name="keywords" content="produtos limpeza, catálogo, linha cozinha, lavanderia, desinfecção, Axyon Clean">
+    <meta name="author" content="Axyon Clean">
+    <title>Produtos - Axyon Clean</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ============= CSS INTEGRADO ============= -->
+    <style>
+        /* ========== CSS VARIABLES ========== */
+        :root {
+          /* Colors */
+          --first-color: #2563eb;
+          --first-color-alt: #1d4ed8;
+          --first-color-light: #dbeafe;
+          --second-color: #10b981;
+          --title-color: #1f2937;
+          --text-color: #6b7280;
+          --text-color-light: #9ca3af;
+          --body-color: #ffffff;
+          --container-color: #f9fafb;
+          --border-color: #e5e7eb;
+          --shadow-color: rgba(0, 0, 0, 0.1);
+          --gradient-color: linear-gradient(135deg, var(--first-color) 0%, var(--second-color) 100%);
+
+          /* Typography */
+          --body-font: 'Inter', sans-serif;
+          --biggest-font-size: 3rem;
+          --h1-font-size: 2.25rem;
+          --h2-font-size: 1.875rem;
+          --h3-font-size: 1.5rem;
+          --normal-font-size: 1rem;
+          --small-font-size: 0.875rem;
+          --smaller-font-size: 0.75rem;
+
+          /* Font Weight */
+          --font-light: 300;
+          --font-regular: 400;
+          --font-medium: 500;
+          --font-semi-bold: 600;
+          --font-bold: 700;
+
+          /* Spacing */
+          --header-height: 4.5rem;
+          --section-padding: 6rem 0 2rem;
+
+          /* Border Radius */
+          --border-radius: 0.75rem;
+          --border-radius-small: 0.5rem;
+
+          /* Transition */
+          --transition: all 0.3s ease;
+
+          /* Z-index */
+          --z-tooltip: 10;
+          --z-fixed: 100;
+          --z-modal: 1000;
+        }
+
+        /* ========== BASE ========== */
+        * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          font-family: var(--body-font);
+          font-size: var(--normal-font-size);
+          font-weight: var(--font-regular);
+          background-color: var(--body-color);
+          color: var(--text-color);
+          line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+          color: var(--title-color);
+          font-weight: var(--font-semi-bold);
+          line-height: 1.2;
+        }
+
+        ul {
+          list-style: none;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        button {
+          cursor: pointer;
+          border: none;
+          outline: none;
+          font-family: inherit;
+        }
+
+        /* ========== REUSABLE CSS CLASSES ========== */
+        .container {
+          max-width: 1140px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        .grid {
+          display: grid;
+        }
+
+        .section {
+          padding: var(--section-padding);
+        }
+
+        .section__title {
+          font-size: var(--h2-font-size);
+          font-weight: var(--font-bold);
+          color: var(--title-color);
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+
+        .section__subtitle {
+          color: var(--text-color);
+          text-align: center;
+          margin-bottom: 3rem;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        /* Buttons */
+        .button {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 1rem 1.5rem;
+          border-radius: var(--border-radius);
+          font-weight: var(--font-medium);
+          transition: var(--transition);
+          text-align: center;
+          cursor: pointer;
+        }
+
+        .button__primary {
+          background: var(--gradient-color);
+          color: #ffffff;
+          box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .button__primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .button__secondary {
+          background-color: transparent;
+          color: var(--first-color);
+          border: 2px solid var(--first-color);
+        }
+
+        .button__secondary:hover {
+          background-color: var(--first-color);
+          color: #ffffff;
+        }
+
+        /* ========== HEADER & NAV ========== */
+        .header {
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(10px);
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: var(--z-fixed);
+          transition: var(--transition);
+          box-shadow: 0 2px 10px var(--shadow-color);
+        }
+
+        .nav {
+          height: var(--header-height);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .nav__logo {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: var(--font-bold);
+          font-size: 1.25rem;
+          color: var(--title-color);
+        }
+
+        .nav__logo-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        .nav__list {
+          display: flex;
+          gap: 2rem;
+        }
+
+        .nav__link {
+          color: var(--text-color);
+          font-weight: var(--font-medium);
+          transition: var(--transition);
+          position: relative;
+        }
+
+        .nav__link:hover,
+        .nav__link.active-link {
+          color: var(--first-color);
+        }
+
+        .nav__link::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background: var(--gradient-color);
+          bottom: -0.5rem;
+          left: 0;
+          transition: var(--transition);
+        }
+
+        .nav__link:hover::after,
+        .nav__link.active-link::after {
+          width: 100%;
+        }
+
+        .nav__toggle,
+        .nav__close {
+          display: none;
+          font-size: 1.25rem;
+          cursor: pointer;
+          color: var(--title-color);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+          padding-top: calc(var(--header-height) + 2rem);
+          background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+          text-align: center;
+          padding-bottom: 4rem;
+        }
+
+        .hero__title {
+          font-size: var(--biggest-font-size);
+          font-weight: var(--font-bold);
+          margin-bottom: 1rem;
+          background: var(--gradient-color);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .hero__subtitle {
+          font-size: 1.25rem;
+          color: var(--text-color);
+          margin-bottom: 2rem;
+        }
+
+        /* ========== FILTER SECTION ========== */
+        .filter {
+          background-color: var(--container-color);
+          padding: 2rem 0;
+          border-bottom: 1px solid var(--border-color);
+        }
+
+        .filter__container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
+
+        .filter__button {
+          padding: 0.75rem 1.5rem;
+          background-color: #ffffff;
+          border: 2px solid var(--border-color);
+          border-radius: var(--border-radius);
+          color: var(--text-color);
+          font-weight: var(--font-medium);
+          transition: var(--transition);
+          cursor: pointer;
+        }
+
+        .filter__button:hover,
+        .filter__button.active {
+          background: var(--gradient-color);
+          color: #ffffff;
+          border-color: var(--first-color);
+        }
+
+        /* ========== PRODUCTS GRID ========== */
+        .products {
+          padding: 4rem 0;
+        }
+
+        /* ========== CATEGORY SECTIONS ========== */
+        .category-sections {
+          margin-bottom: 3rem;
+        }
+
+        .category-section {
+          margin-bottom: 3rem;
+          display: none; /* Inicialmente oculto, será mostrado via JavaScript conforme filtro */
+        }
+
+        .category-section.active {
+          display: block;
+        }
+
+        .category-header {
+          text-align: center;
+          padding: 2rem 0 1rem;
+          border-bottom: 2px solid var(--border-color);
+          margin-bottom: 2rem;
+          position: relative;
+        }
+
+        .category-header::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 2px;
+          background: var(--gradient-color);
+        }
+
+        .category-title {
+          font-size: var(--h2-font-size);
+          font-weight: var(--font-bold);
+          background: var(--gradient-color);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-bottom: 0.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+        }
+
+        .category-icon {
+          font-size: 1.5rem;
+          color: var(--first-color);
+          -webkit-text-fill-color: var(--first-color);
+        }
+
+        .category-description {
+          font-size: var(--normal-font-size);
+          color: var(--text-color-light);
+          max-width: 600px;
+          margin: 0 auto;
+          line-height: 1.6;
+        }
+
+        .products__grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 2rem;
+          margin-top: 2rem;
+        }
+
+        .product__card {
+          background-color: #ffffff;
+          border-radius: var(--border-radius);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+          overflow: hidden;
+          transition: var(--transition);
+          border: 1px solid var(--border-color);
+          display: flex;
+          flex-direction: column;
+        }
+
+        .product__card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .product__image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          background: linear-gradient(135deg, #f8faff 0%, #e8f4f8 100%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .product__image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: var(--transition);
+        }
+
+        .product__image:hover img {
+          transform: scale(1.05);
+        }
+
+        .product__image-placeholder {
+          background: linear-gradient(135deg, var(--first-color) 0%, var(--first-color-alt) 100%);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 3rem;
+          opacity: 0.7;
+        }
+
+        .product__header {
+          padding: 2rem 2rem 1rem;
+          text-align: center;
+          background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+        }
+
+        .product__icon {
+          font-size: 3rem;
+          background: var(--gradient-color);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-bottom: 1rem;
+        }
+
+        .product__title {
+          font-size: var(--h3-font-size);
+          font-weight: var(--font-semi-bold);
+          margin-bottom: 0.5rem;
+          color: var(--title-color);
+        }
+
+        .product__subtitle {
+          color: var(--text-color);
+          font-size: var(--small-font-size);
+        }
+
+        .product__content {
+          padding: 1.5rem 2rem 2rem;
+        }
+
+        .product__description {
+          margin-bottom: 1.5rem;
+          color: var(--text-color);
+          line-height: 1.6;
+        }
+
+        .product__list {
+          margin-bottom: 2rem;
+        }
+
+        .product__list-title {
+          font-size: var(--normal-font-size);
+          font-weight: var(--font-semi-bold);
+          color: var(--title-color);
+          margin-bottom: 1rem;
+        }
+
+        .product__items {
+          display: grid;
+          gap: 0.75rem;
+        }
+
+        .product__item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.75rem;
+          background-color: var(--container-color);
+          border-radius: var(--border-radius-small);
+          transition: var(--transition);
+        }
+
+        .product__item:hover {
+          background-color: var(--first-color-light);
+        }
+
+        .product__item-icon {
+          font-size: 1.25rem;
+          color: var(--first-color);
+          flex-shrink: 0;
+        }
+
+        .product__item-text {
+          color: var(--text-color);
+          font-size: var(--small-font-size);
+        }
+
+        .product__footer {
+          padding: 0 2rem 2rem;
+          text-align: center;
+        }
+
+        .product__buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          width: 100%;
+        }
+
+        .product__button,
+        .cart-add-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          padding: 0.75rem 1.5rem;
+          border-radius: var(--border-radius);
+          font-weight: var(--font-medium);
+          transition: var(--transition);
+          text-decoration: none;
+          border: none;
+          cursor: pointer;
+          font-size: var(--normal-font-size);
+          width: 100%;
+        }
+
+        .button__primary {
+          background: var(--gradient-color);
+          color: #ffffff;
+        }
+
+        .button__primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .button__secondary {
+          background: transparent;
+          color: var(--first-color);
+          border: 2px solid var(--first-color);
+        }
+
+        .button__secondary:hover {
+          background: var(--first-color);
+          color: white;
+          transform: translateY(-2px);
+        }
+
+        .product__button {
+          width: 100%;
+          justify-content: center;
+        }
+
+        /* ========== CATEGORY BADGES ========== */
+        .category-badge {
+          display: inline-block;
+          padding: 0.25rem 0.75rem;
+          background: var(--gradient-color);
+          color: #ffffff;
+          border-radius: 50px;
+          font-size: var(--smaller-font-size);
+          font-weight: var(--font-medium);
+          margin-bottom: 1rem;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta {
+          background: var(--gradient-color);
+          color: #ffffff;
+          text-align: center;
+          padding: 4rem 0;
+        }
+
+        .cta__title {
+          font-size: var(--h2-font-size);
+          font-weight: var(--font-bold);
+          margin-bottom: 1rem;
+          color: #ffffff;
+        }
+
+        .cta__description {
+          font-size: 1.125rem;
+          margin-bottom: 2rem;
+          opacity: 0.9;
+        }
+
+        .cta__button {
+          background-color: #ffffff;
+          color: var(--first-color);
+          font-weight: var(--font-semi-bold);
+        }
+
+        .cta__button:hover {
+          background-color: var(--container-color);
+          transform: translateY(-2px);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+          background-color: var(--title-color);
+          color: #ffffff;
+          padding: 3rem 0 2rem;
+        }
+
+        .footer__content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          margin-bottom: 2rem;
+        }
+
+        .footer__logo {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-weight: var(--font-bold);
+          font-size: 1.25rem;
+          margin-bottom: 1rem;
+        }
+
+        .footer__logo-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        .footer__description {
+          margin-bottom: 1.5rem;
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.6;
+        }
+
+        .footer__social {
+          display: flex;
+          gap: 1rem;
+        }
+
+        .footer__social-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 50%;
+          color: #ffffff;
+          transition: var(--transition);
+        }
+
+        .footer__social-link:hover {
+          background-color: var(--first-color);
+          transform: translateY(-2px);
+        }
+
+        .footer__title {
+          font-size: var(--h3-font-size);
+          margin-bottom: 1rem;
+        }
+
+        .footer__links {
+          display: grid;
+          gap: 0.5rem;
+        }
+
+        .footer__link {
+          color: rgba(255, 255, 255, 0.8);
+          transition: var(--transition);
+        }
+
+        .footer__link:hover {
+          color: var(--first-color);
+          padding-left: 0.5rem;
+        }
+
+        .footer__info {
+          display: grid;
+          gap: 0.75rem;
+        }
+
+        .footer__info p {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer__info i {
+          color: var(--first-color);
+        }
+
+        .footer__bottom {
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding-top: 2rem;
+          text-align: center;
+        }
+
+        .footer__copy {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: var(--small-font-size);
+        }
+
+        /* ========== SCROLL UP ========== */
+        .scrollup {
+          position: fixed;
+          right: 1rem;
+          bottom: -20%;
+          background: var(--gradient-color);
+          color: #ffffff;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25rem;
+          box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+          transition: var(--transition);
+          z-index: var(--z-tooltip);
+        }
+
+        .scrollup:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .show-scroll {
+          bottom: 3rem;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media screen and (max-width: 768px) {
+          .nav__menu {
+            position: fixed;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            width: 80%;
+            height: 100%;
+            top: 0;
+            right: -100%;
+            box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+            padding: 4rem 2rem 0;
+            transition: var(--transition);
+            z-index: var(--z-fixed);
+          }
+
+          .nav__list {
+            flex-direction: column;
+            gap: 2rem;
+          }
+
+          .nav__close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+          }
+
+          .nav__toggle,
+          .nav__close {
+            display: block;
+          }
+
+          .show-menu {
+            right: 0;
+          }
+
+          .hero__title {
+            font-size: 2.5rem;
+          }
+
+          .filter__container {
+            gap: 0.5rem;
+          }
+
+          .filter__button {
+            padding: 0.5rem 1rem;
+            font-size: var(--small-font-size);
+          }
+
+          .category-title {
+            font-size: var(--h3-font-size);
+            flex-direction: column;
+            gap: 0.5rem;
+          }
+
+          .category-icon {
+            font-size: 1.25rem;
+          }
+
+          .category-header {
+            padding: 1.5rem 0 0.75rem;
+            margin-bottom: 1.5rem;
+          }
+
+          .category-description {
+            font-size: var(--small-font-size);
+            padding: 0 1rem;
+          }
+
+          .product__image {
+            height: 180px;
+          }
+
+          .product__image-placeholder {
+            font-size: 2.5rem;
+          }
+
+          .modal-image,
+          .modal-image-placeholder {
+            max-width: 250px;
+            height: 150px;
+            font-size: 2rem;
+          }
+
+          .products__grid {
+            grid-template-columns: 1fr;
+          }
+
+          .footer__content {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+
+          .footer__social {
+            justify-content: center;
+          }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-up {
+          animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Hide products initially for filter animation */
+        .product__card {
+          opacity: 1;
+          transition: opacity 0.3s ease;
+        }
+
+        .product__card.hidden {
+          display: none;
+        }
+
+        /* ========== PRODUCT MODAL ========== */
+        .product-modal {
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(5px);
+          animation: modalFadeIn 0.3s ease;
+        }
+
+        .product-modal.show {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+        }
+
+        .modal-content {
+          background-color: white;
+          border-radius: var(--border-radius);
+          max-width: 800px;
+          width: 100%;
+          max-height: 90vh;
+          overflow-y: auto;
+          position: relative;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+          animation: modalSlideIn 0.4s ease;
+        }
+
+        .modal-header {
+          padding: 2rem 2rem 1rem;
+          border-bottom: 1px solid var(--border-color);
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+
+        .modal-close {
+          background: none;
+          border: none;
+          font-size: 1.5rem;
+          color: var(--text-color-light);
+          cursor: pointer;
+          padding: 0.5rem;
+          border-radius: 50%;
+          transition: var(--transition);
+          min-width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .modal-close:hover {
+          background-color: var(--border-color);
+          color: var(--text-color);
+        }
+
+        .modal-title {
+          font-size: var(--h2-font-size);
+          font-weight: var(--font-bold);
+          color: var(--title-color);
+          margin: 0;
+          flex: 1;
+        }
+
+        .modal-body {
+          padding: 2rem;
+        }
+
+        .modal-image {
+          width: 100%;
+          max-width: 300px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: var(--border-radius);
+          margin: 0 auto 2rem;
+          display: block;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-image-placeholder {
+          width: 100%;
+          max-width: 300px;
+          height: 200px;
+          background: linear-gradient(135deg, var(--first-color) 0%, var(--first-color-alt) 100%);
+          border-radius: var(--border-radius);
+          margin: 0 auto 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-size: 3rem;
+          opacity: 0.8;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-category {
+          display: inline-block;
+          background: var(--gradient-color);
+          color: white;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-size: var(--small-font-size);
+          font-weight: var(--font-medium);
+          margin-bottom: 1rem;
+        }
+
+        .modal-description {
+          font-size: var(--normal-font-size);
+          line-height: 1.8;
+          color: var(--text-color);
+          margin-bottom: 2rem;
+          text-align: justify;
+        }
+
+        .modal-specs {
+          background-color: #f8faff;
+          border-radius: var(--border-radius);
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+        }
+
+        .modal-specs-title {
+          font-size: var(--h3-font-size);
+          font-weight: var(--font-bold);
+          color: var(--title-color);
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .modal-specs-list {
+          display: grid;
+          gap: 0.75rem;
+        }
+
+        .modal-spec-item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          font-size: var(--normal-font-size);
+        }
+
+        .modal-spec-icon {
+          color: var(--first-color);
+          font-size: 1rem;
+          min-width: 20px;
+        }
+
+        .modal-whatsapp {
+          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+          color: white;
+          border: none;
+          padding: 1rem 2rem;
+          border-radius: var(--border-radius);
+          font-size: var(--normal-font-size);
+          font-weight: var(--font-medium);
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+          width: 100%;
+          transition: var(--transition);
+          text-decoration: none;
+        }
+
+        .modal-whatsapp:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        @keyframes modalFadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        @keyframes modalSlideIn {
+          from {
+            opacity: 0;
+            transform: translateY(-50px) scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        /* Responsive Modal */
+        @media screen and (max-width: 768px) {
+          .modal-content {
+            margin: 1rem;
+            max-height: 95vh;
+          }
+
+          .modal-header {
+            padding: 1.5rem 1.5rem 1rem;
+          }
+
+          .modal-body {
+            padding: 1.5rem;
+          }
+
+          .modal-title {
+            font-size: var(--h3-font-size);
+          }
+
+          .modal-specs {
+            padding: 1rem;
+          }
+        }
+
+        /* ========== SHOPPING CART ========== */
+        .cart-icon {
+          position: fixed;
+          top: 50%;
+          right: 1rem;
+          transform: translateY(-50%);
+          background: var(--gradient-color);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          font-size: 1.5rem;
+          cursor: pointer;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          z-index: 999;
+          transition: var(--transition);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .cart-icon:hover {
+          transform: translateY(-50%) scale(1.1);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .cart-badge {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background: #ff4757;
+          color: white;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          font-size: 0.75rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+        }
+
+        .cart-modal {
+          display: none;
+          position: fixed;
+          z-index: 1001;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(5px);
+        }
+
+        .cart-modal.show {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem;
+        }
+
+        .cart-content {
+          background: white;
+          border-radius: var(--border-radius);
+          max-width: 600px;
+          width: 100%;
+          max-height: 90vh;
+          overflow-y: auto;
+        }
+
+        .cart-header {
+          padding: 1.5rem;
+          border-bottom: 1px solid var(--border-color);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .cart-title {
+          font-size: var(--h2-font-size);
+          font-weight: var(--font-bold);
+          color: var(--title-color);
+          margin: 0;
+        }
+
+        .cart-body {
+          padding: 1.5rem;
+        }
+
+        .cart-item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem;
+          border: 1px solid var(--border-color);
+          border-radius: var(--border-radius);
+          margin-bottom: 1rem;
+        }
+
+        .cart-item-image {
+          width: 60px;
+          height: 60px;
+          background: var(--gradient-color);
+          color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
+          flex-shrink: 0;
+        }
+
+        .cart-item-info {
+          flex: 1;
+        }
+
+        .cart-item-name {
+          font-weight: var(--font-medium);
+          color: var(--title-color);
+          margin-bottom: 0.25rem;
+        }
+
+        .cart-item-category {
+          font-size: var(--small-font-size);
+          color: var(--text-color-light);
+        }
+
+        .cart-item-controls {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .quantity-btn {
+          background: var(--first-color);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: var(--transition);
+        }
+
+        .quantity-btn:hover {
+          background: var(--first-color-alt);
+        }
+
+        .quantity-display {
+          font-weight: var(--font-medium);
+          min-width: 30px;
+          text-align: center;
+        }
+
+        .remove-btn {
+          background: #ff4757;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: var(--transition);
+          margin-left: 0.5rem;
+        }
+
+        .remove-btn:hover {
+          background: #ff3838;
+        }
+
+        .cart-empty {
+          text-align: center;
+          padding: 3rem 1rem;
+          color: var(--text-color-light);
+        }
+
+        .cart-empty i {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+          color: var(--border-color);
+        }
+
+        .cart-footer {
+          padding: 1.5rem;
+          border-top: 1px solid var(--border-color);
+          background: #f8faff;
+        }
+
+        .cart-total {
+          font-size: var(--h3-font-size);
+          font-weight: var(--font-bold);
+          color: var(--title-color);
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        .checkout-btn {
+          background: var(--gradient-color);
+          color: white;
+          border: none;
+          padding: 1rem 2rem;
+          border-radius: var(--border-radius);
+          font-size: var(--normal-font-size);
+          font-weight: var(--font-medium);
+          cursor: pointer;
+          width: 100%;
+          transition: var(--transition);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.75rem;
+        }
+
+        .checkout-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .checkout-btn:disabled {
+          background: var(--border-color);
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
+        }
+
+        /* Animações das notificações */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index-completo.html" class="nav__logo">
+                <img src="images/logo.png" alt="Axyon Clean" class="nav__logo-img">
+                <span class="nav__logo-text">Axyon Clean</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index-completo.html#home" class="nav__link">Início</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index-completo.html#about" class="nav__link">Sobre</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="produtos.html" class="nav__link active-link">Produtos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index-completo.html#contact" class="nav__link">Contato</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero__title">Nossos Produtos</h1>
+            <p class="hero__subtitle">
+                Descubra nossa linha completa de produtos de limpeza profissional para todas as suas necessidades
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter">
+        <div class="container">
+            <div class="filter__container">
+                <button class="filter__button active" data-filter="all">
+                    <i class="fas fa-th"></i> Todos os Produtos
+                </button>
+                <button class="filter__button" data-filter="cozinha">
+                    <i class="fas fa-utensils"></i> Cozinha
+                </button>
+                <button class="filter__button" data-filter="lavanderia">
+                    <i class="fas fa-tshirt"></i> Lavanderia
+                </button>
+                <button class="filter__button" data-filter="pisos">
+                    <i class="fas fa-mountain"></i> Pisos/Pedras
+                </button>
+                <button class="filter__button" data-filter="desinfeccao">
+                    <i class="fas fa-shield-virus"></i> Desinfecção
+                </button>
+                <button class="filter__button" data-filter="automotiva">
+                    <i class="fas fa-car"></i> Automotiva
+                </button>
+                <button class="filter__button" data-filter="geral">
+                    <i class="fas fa-broom"></i> Limpeza Geral
+                </button>
+                <button class="filter__button" data-filter="clorados">
+                    <i class="fas fa-tint"></i> Clorados
+                </button>
+                <button class="filter__button" data-filter="higiene">
+                    <i class="fas fa-hands-wash"></i> Higiene
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <!-- Seção de Títulos das Categorias -->
+            <div class="category-sections">
+                <!-- COZINHA -->
+                <div class="category-section" id="cozinha-section">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <i class="fas fa-utensils category-icon"></i>
+                            Linha Cozinha
+                        </h2>
+                        <p class="category-description">Produtos especializados para limpeza e higiene da cozinha</p>
+                    </div>
+                </div>
+
+                <!-- LAVANDERIA -->
+                <div class="category-section" id="lavanderia-section">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <i class="fas fa-tshirt category-icon"></i>
+                            Linha Lavanderia
+                        </h2>
+                        <p class="category-description">Sabões, amaciantes e produtos para cuidado das roupas</p>
+                    </div>
+                </div>
+
+                <!-- PISOS -->
+                <div class="category-section" id="pisos-section">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <i class="fas fa-home category-icon"></i>
+                            Linha Pisos e Superfícies
+                        </h2>
+                        <p class="category-description">Limpadores para pisos, porcelanatos e diferentes superfícies</p>
+                    </div>
+                </div>
+
+                <!-- DESINFECÇÃO -->
+                <div class="category-section" id="desinfeccao-section">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <i class="fas fa-shield-virus category-icon"></i>
+                            Linha Desinfecção
+                        </h2>
+                        <p class="category-description">Desinfetantes com diferentes fragrâncias para ambientes</p>
+                    </div>
+                </div>
+
+                <!-- AUTOMOTIVA -->
+                <div class="category-section" id="automotiva-section">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <i class="fas fa-car category-icon"></i>
+                            Linha Automotiva
+                        </h2>
+                        <p class="category-description">Produtos especiais para limpeza e cuidado automotivo</p>
+                    </div>
+                </div>
+
+                <!-- CLORADOS -->
+                <div class="category-section" id="clorados-section">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <i class="fas fa-flask category-icon"></i>
+                            Linha Clorados
+                        </h2>
+                        <p class="category-description">Produtos à base de cloro para desinfecção e branqueamento</p>
+                    </div>
+                </div>
+
+                <!-- HIGIENE -->
+                <div class="category-section" id="higiene-section">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <i class="fas fa-hands-wash category-icon"></i>
+                            Linha Higiene
+                        </h2>
+                        <p class="category-description">Sabonetes líquidos com fragrâncias especiais</p>
+                    </div>
+                </div>
+
+                <!-- LIMPEZA GERAL -->
+                <div class="category-section" id="geral-section">
+                    <div class="category-header">
+                        <h2 class="category-title">
+                            <i class="fas fa-broom category-icon"></i>
+                            Linha Limpeza Geral
+                        </h2>
+                        <p class="category-description">Produtos versáteis para limpeza geral e multiuso</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products__grid" id="products-grid">
+                
+                <!-- LINHA COZINHA - HARMONIEX -->
+                <!-- Lava Louças -->
+                <div class="product__card" data-category="cozinha">
+                    <div class="product__image">
+                        <div class="product__image-placeholder">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="product__header">
+                        <span class="category-badge">Linha Cozinha</span>
+                        <h3 class="product__title">Lava Louças Harmoniex</h3>
+                        <p class="product__subtitle">Detergente profissional concentrado</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Detergente concentrado para limpeza profissional de louças com alta performance na remoção de gorduras.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Disponível em:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Embalagem 2L</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Embalagem 5L</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Fórmula biodegradável</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('lava-loucas')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('lava-loucas', 'Lava Louças Harmoniex', 'Linha Cozinha', 'fas fa-utensils')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desengordurante -->
+                <div class="product__card" data-category="cozinha">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Cozinha</span>
+                        <i class="fas fa-fire product__icon"></i>
+                        <h3 class="product__title">Desengordurante Harmoniex</h3>
+                        <p class="product__subtitle">Remoção potente de gorduras</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Desengordurante de alta performance para cozinhas profissionais e domésticas, remove gorduras pesadas rapidamente.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-fire product__item-icon"></i>
+                                    <span class="product__item-text">Ação rápida contra gordura</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-sparkles product__item-icon"></i>
+                                    <span class="product__item-text">Não deixa resíduos</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('desengordurante')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('desengordurante', 'Desengordurante Harmoniex', 'Linha Cozinha', 'fas fa-fire')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Limpa Alumínio -->
+                <div class="product__card" data-category="cozinha">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Cozinha</span>
+                        <i class="fas fa-utensils product__icon"></i>
+                        <h3 class="product__title">Limpa Alumínio Harmoniex</h3>
+                        <p class="product__subtitle">Especializado para alumínio</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Produto específico para limpeza e conservação de utensílios de alumínio, panelas e equipamentos.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-shield-alt product__item-icon"></i>
+                                    <span class="product__item-text">Proteção do alumínio</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-gem product__item-icon"></i>
+                                    <span class="product__item-text">Restaura o brilho</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('limpa-aluminio')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('limpa-aluminio', 'Limpa Alumínio Harmoniex', 'Linha Cozinha', 'fas fa-utensils')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soluupamm -->
+                <div class="product__card" data-category="cozinha">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Cozinha</span>
+                        <i class="fas fa-spray-can product__icon"></i>
+                        <h3 class="product__title">Soluupamm Harmoniex</h3>
+                        <p class="product__subtitle">Solução universal de limpeza</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Produto versátil para limpeza geral de cozinhas, eficaz em diversas superfícies e equipamentos.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-magic product__item-icon"></i>
+                                    <span class="product__item-text">Múltiplas superfícies</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-check-circle product__item-icon"></i>
+                                    <span class="product__item-text">Praticidade total</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('soluupamm')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('soluupamm', 'Soluupamm Harmoniex', 'Linha Cozinha', 'fas fa-spray-can')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flotador -->
+                <div class="product__card" data-category="cozinha">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Cozinha</span>
+                        <i class="fas fa-bubbles product__icon"></i>
+                        <h3 class="product__title">Flotador Harmoniex</h3>
+                        <p class="product__subtitle">Limpeza com ação flotante</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Produto com tecnologia especial para limpeza profunda com ação flotante, ideal para equipamentos de cozinha.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-water product__item-icon"></i>
+                                    <span class="product__item-text">Tecnologia flotante</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-tools product__item-icon"></i>
+                                    <span class="product__item-text">Ideal para equipamentos</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('flotador')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('flotador', 'Flotador Harmoniex', 'Linha Cozinha', 'fas fa-bubbles')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LINHA LAVANDERIA - HARMONIEX -->
+                <!-- Lava Roupas Blue -->
+                <div class="product__card" data-category="lavanderia">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Lavanderia</span>
+                        <i class="fas fa-tshirt product__icon"></i>
+                        <h3 class="product__title">Lava Roupas Blue Harmoniex</h3>
+                        <p class="product__subtitle">Fragrância blue duradoura</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Sabão líquido concentrado com fragrância blue exclusiva, ideal para roupas delicadas e coloridas.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-heart product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância blue duradoura</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-palette product__item-icon"></i>
+                                    <span class="product__item-text">Proteção das cores</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('lava-roupas-blue')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('lava-roupas-blue', 'Lava Roupas Blue Harmoniex', 'Linha Lavanderia', 'fas fa-tshirt')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lava Roupas Coco -->
+                <div class="product__card" data-category="lavanderia">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Lavanderia</span>
+                        <i class="fas fa-seedling product__icon"></i>
+                        <h3 class="product__title">Lava Roupas Coco Harmoniex</h3>
+                        <p class="product__subtitle">Com óleo de coco natural</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Sabão líquido enriquecido com óleo de coco, proporciona maciez natural e limpeza suave às roupas.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Óleo de coco natural</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-feather product__item-icon"></i>
+                                    <span class="product__item-text">Maciez natural</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('lava-roupas-coco')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('lava-roupas-coco', 'Lava Roupas Coco Harmoniex', 'Linha Lavanderia', 'fas fa-seedling')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lava Roupas Power Green -->
+                <div class="product__card" data-category="lavanderia">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Lavanderia</span>
+                        <i class="fas fa-bolt product__icon"></i>
+                        <h3 class="product__title">Lava Roupas Power Green</h3>
+                        <p class="product__subtitle">Poder concentrado ecológico</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Sabão líquido ecológico de alta performance, com fórmula concentrada e ingredientes sustentáveis.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-recycle product__item-icon"></i>
+                                    <span class="product__item-text">Fórmula ecológica</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bolt product__item-icon"></i>
+                                    <span class="product__item-text">Alta performance</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('lava-roupas-power-green')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('lava-roupas-power-green', 'Lava Roupas Power Green', 'Linha Lavanderia', 'fas fa-bolt')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amaciante Premium -->
+                <div class="product__card" data-category="lavanderia">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Lavanderia</span>
+                        <i class="fas fa-star product__icon"></i>
+                        <h3 class="product__title">Amaciante Premium Harmoniex</h3>
+                        <p class="product__subtitle">Linha premium de maciez</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Amaciante de linha premium com fragrância sofisticada e maciez excepcional para roupas delicadas.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-crown product__item-icon"></i>
+                                    <span class="product__item-text">Linha premium</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-feather product__item-icon"></i>
+                                    <span class="product__item-text">Maciez excepcional</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('amaciante-premium')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('amaciante-premium', 'Amaciante Premium Harmoniex', 'Linha Lavanderia', 'fas fa-star')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amaciante Blue -->
+                <div class="product__card" data-category="lavanderia">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Lavanderia</span>
+                        <i class="fas fa-droplet product__icon"></i>
+                        <h3 class="product__title">Amaciante Blue Harmoniex</h3>
+                        <p class="product__subtitle">Fragrância blue envolvente</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Amaciante com fragrância blue marcante, proporciona maciez e perfume duradouro às roupas.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-heart product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância blue envolvente</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-clock product__item-icon"></i>
+                                    <span class="product__item-text">Perfume duradouro</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('amaciante-blue')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('amaciante-blue', 'Amaciante Blue Harmoniex', 'Linha Lavanderia', 'fas fa-droplet')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alvejante sem Cloro -->
+                <div class="product__card" data-category="lavanderia">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Lavanderia</span>
+                        <i class="fas fa-sun product__icon"></i>
+                        <h3 class="product__title">Alvejante sem Cloro Harmoniex</h3>
+                        <p class="product__subtitle">Branqueamento suave</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Alvejante livre de cloro para branqueamento suave e seguro de roupas coloridas e delicadas.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Sem cloro</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-shield-alt product__item-icon"></i>
+                                    <span class="product__item-text">Seguro para cores</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('alvejante-sem-cloro')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('alvejante-sem-cloro', 'Alvejante sem Cloro Harmoniex', 'Linha Lavanderia', 'fas fa-sun')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Passa Fácil -->
+                <div class="product__card" data-category="lavanderia">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Lavanderia</span>
+                        <i class="fas fa-iron product__icon"></i>
+                        <h3 class="product__title">Passa Fácil Harmoniex</h3>
+                        <p class="product__subtitle">Facilita o processo de passar</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Produto facilitador para passar roupas, reduz rugas e facilita o processo de engomar.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-magic product__item-icon"></i>
+                                    <span class="product__item-text">Reduz rugas</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-clock product__item-icon"></i>
+                                    <span class="product__item-text">Economiza tempo</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Embalagem 2L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('passa-facil')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('passa-facil', 'Passa Fácil Harmoniex', 'Linha Lavanderia', 'fas fa-iron')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LINHA PISOS/PEDRAS - HARMONIEX -->
+                <!-- Limpa Pisos -->
+                <div class="product__card" data-category="pisos">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Pisos/Pedras</span>
+                        <i class="fas fa-mountain product__icon"></i>
+                        <h3 class="product__title">Limpa Pisos Harmoniex</h3>
+                        <p class="product__subtitle">Limpeza completa de pisos</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Produto especializado para limpeza de todos os tipos de pisos, mantendo brilho e proteção.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-gem product__item-icon"></i>
+                                    <span class="product__item-text">Mantém o brilho</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-shield-alt product__item-icon"></i>
+                                    <span class="product__item-text">Proteção da superfície</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('limpa-pisos')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('limpa-pisos', 'Limpa Pisos Harmoniex', 'Linha Casa', 'fas fa-mountain')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Limpa Porcelanatos -->
+                <div class="product__card" data-category="pisos">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Pisos/Pedras</span>
+                        <i class="fas fa-square product__icon"></i>
+                        <h3 class="product__title">Limpa Porcelanatos Harmoniex</h3>
+                        <p class="product__subtitle">Especializado para porcelanato</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Fórmula específica para limpeza de porcelanatos, preservando as características do material.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-star product__item-icon"></i>
+                                    <span class="product__item-text">Específico para porcelanato</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-eye product__item-icon"></i>
+                                    <span class="product__item-text">Preserva características</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('limpa-porcelanatos')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('limpa-porcelanatos', 'Limpa Porcelanatos Harmoniex', 'Linha Casa', 'fas fa-square')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pinho Gel -->
+                <div class="product__card" data-category="pisos">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Pisos/Pedras</span>
+                        <i class="fas fa-tree product__icon"></i>
+                        <h3 class="product__title">Pinho Gel Harmoniex</h3>
+                        <p class="product__subtitle">Fragrância pinho natural</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Limpador em gel com fragrância natural de pinho, ideal para ambientes que precisam de frescor duradouro.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância natural de pinho</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-droplet product__item-icon"></i>
+                                    <span class="product__item-text">Fórmula gel</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('pinho-gel')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('pinho-gel', 'Pinho Gel Harmoniex', 'Linha Casa', 'fas fa-tree')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Limpa Pedras -->
+                <div class="product__card" data-category="pisos">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Pisos/Pedras</span>
+                        <i class="fas fa-gem product__icon"></i>
+                        <h3 class="product__title">Limpa Pedras Harmoniex</h3>
+                        <p class="product__subtitle">Cuidado especial para pedras</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Produto desenvolvido especialmente para limpeza e conservação de pedras naturais como mármore e granito.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-mountain product__item-icon"></i>
+                                    <span class="product__item-text">Para pedras naturais</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-shield-alt product__item-icon"></i>
+                                    <span class="product__item-text">Conservação especial</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('limpa-pedras')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('limpa-pedras', 'Limpa Pedras Harmoniex', 'Linha Casa', 'fas fa-gem')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__card" data-category="pisos">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Pisos/Pedras</span>
+                        <i class="fas fa-mountain product__icon"></i>
+                        <h3 class="product__title">Cera Líquida Premium</h3>
+                        <p class="product__subtitle">Proteção e brilho duradouro</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Cera líquida de alta qualidade para proteção e brilho de pisos, com tecnologia anti-derrapante.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-gem product__item-icon"></i>
+                                    <span class="product__item-text">Brilho intenso</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-walking product__item-icon"></i>
+                                    <span class="product__item-text">Anti-derrapante</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-calendar-alt product__item-icon"></i>
+                                    <span class="product__item-text">Proteção duradoura</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('cera-liquida')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('cera-liquida', 'Cera Líquida Premium', 'Linha Casa', 'fas fa-mountain')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Álcool 70% -->
+                <div class="product__card" data-category="desinfeccao">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Desinfecção</span>
+                        <i class="fas fa-shield-virus product__icon"></i>
+                        <h3 class="product__title">Álcool 70% Profissional</h3>
+                        <p class="product__subtitle">Desinfecção máxima garantida</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Álcool 70% de grau farmacêutico para desinfecção de superfícies e equipamentos.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-virus-slash product__item-icon"></i>
+                                    <span class="product__item-text">99,9% de eliminação</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-certificate product__item-icon"></i>
+                                    <span class="product__item-text">Grau farmacêutico</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-clock product__item-icon"></i>
+                                    <span class="product__item-text">Ação rápida</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('alcool-70')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('alcool-70', 'Álcool 70% Profissional', 'Linha Higiene', 'fas fa-shield-virus')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shampoo Automotivo -->
+                <div class="product__card" data-category="automotiva">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Automotiva</span>
+                        <i class="fas fa-car product__icon"></i>
+                        <h3 class="product__title">Shampoo Automotivo</h3>
+                        <p class="product__subtitle">Limpeza sem riscar a pintura</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Shampoo especializado para lavagem de veículos, com fórmula que não agride a pintura.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-palette product__item-icon"></i>
+                                    <span class="product__item-text">Proteção da pintura</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-soap product__item-icon"></i>
+                                    <span class="product__item-text">Espuma densa</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-eye product__item-icon"></i>
+                                    <span class="product__item-text">Brilho natural</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('shampoo-automotivo')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('shampoo-automotivo', 'Shampoo Automotivo', 'Linha Automotiva', 'fas fa-car')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multiuso -->
+                <div class="product__card" data-category="geral">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Limpeza Geral</span>
+                        <i class="fas fa-broom product__icon"></i>
+                        <h3 class="product__title">Limpador Multiuso</h3>
+                        <p class="product__subtitle">Versatilidade para toda casa</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Produto versátil para limpeza de diversas superfícies, com fragrância suave e ação eficaz.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-magic product__item-icon"></i>
+                                    <span class="product__item-text">Múltiplas superfícies</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-heart product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância suave</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-check-circle product__item-icon"></i>
+                                    <span class="product__item-text">Praticidade total</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('limpador-multiuso')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('limpador-multiuso', 'Limpador Multiuso', 'Linha Casa', 'fas fa-broom')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Água Sanitária -->
+                <div class="product__card" data-category="clorados">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Clorados</span>
+                        <i class="fas fa-tint product__icon"></i>
+                        <h3 class="product__title">Água Sanitária</h3>
+                        <p class="product__subtitle">Branqueamento e desinfecção</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Água sanitária de alta concentração para branqueamento de roupas e desinfecção de superfícies.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-sun product__item-icon"></i>
+                                    <span class="product__item-text">Branqueamento potente</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bacteria product__item-icon"></i>
+                                    <span class="product__item-text">Elimina bactérias</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-flask product__item-icon"></i>
+                                    <span class="product__item-text">Alta concentração</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('agua-sanitaria')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('agua-sanitaria', 'Água Sanitária', 'Linha Higiene', 'fas fa-tint')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sabonete Líquido -->
+                <div class="product__card" data-category="higiene">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Higiene</span>
+                        <i class="fas fa-hands-wash product__icon"></i>
+                        <h3 class="product__title">Sabonete Líquido</h3>
+                        <p class="product__subtitle">Higiene e cuidado das mãos</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Sabonete líquido com pH balanceado e agentes hidratantes para higiene diária das mãos.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-balance-scale product__item-icon"></i>
+                                    <span class="product__item-text">pH balanceado</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-tint product__item-icon"></i>
+                                    <span class="product__item-text">Hidratação da pele</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Ingredientes naturais</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('sabonete-liquido')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('sabonete-liquido', 'Sabonete Líquido', 'Linha Higiene', 'fas fa-hands-wash')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LINHA DESINFECÇÃO - HARMONIEX -->
+                <!-- Desinfetante Lavanda -->
+                <div class="product__card" data-category="desinfeccao">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Desinfecção</span>
+                        <i class="fas fa-shield-virus product__icon"></i>
+                        <h3 class="product__title">Desinfetante Lavanda Harmoniex</h3>
+                        <p class="product__subtitle">Fragrância relaxante de lavanda</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Desinfetante com fragrância suave de lavanda, elimina 99,9% dos germes e bactérias.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-virus-slash product__item-icon"></i>
+                                    <span class="product__item-text">Elimina 99,9% dos germes</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância lavanda</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <div class="product__buttons">
+                            <button class="button button__primary product__button" onclick="openProductModal('desinfetante-lavanda')">
+                                <i class="fas fa-info-circle"></i>
+                                Saiba Mais
+                            </button>
+                            <button class="button button__secondary cart-add-btn" onclick="addToCart('desinfetante-lavanda', 'Desinfetante Lavanda Harmoniex', 'Linha Higiene', 'fas fa-shield-virus')">
+                                <i class="fas fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desinfetante Cereja e Avelã -->
+                <div class="product__card" data-category="desinfeccao">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Desinfecção</span>
+                        <i class="fas fa-shield-virus product__icon"></i>
+                        <h3 class="product__title">Desinfetante Cereja e Avelã</h3>
+                        <p class="product__subtitle">Fragrância doce e envolvente</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Desinfetante com fragrância única de cereja e avelã, proporcionando desinfecção e perfume agradável.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-virus-slash product__item-icon"></i>
+                                    <span class="product__item-text">Desinfecção completa</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-heart product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância cereja e avelã</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desinfetante Bambu -->
+                <div class="product__card" data-category="desinfeccao">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Desinfecção</span>
+                        <i class="fas fa-leaf product__icon"></i>
+                        <h3 class="product__title">Desinfetante Bambu Harmoniex</h3>
+                        <p class="product__subtitle">Frescor natural do bambu</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Desinfetante com fragrância natural de bambu, trazendo sensação de frescor e tranquilidade.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância natural</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-wind product__item-icon"></i>
+                                    <span class="product__item-text">Sensação de frescor</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desinfetante Cheiro de Rico -->
+                <div class="product__card" data-category="desinfeccao">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Desinfecção</span>
+                        <i class="fas fa-crown product__icon"></i>
+                        <h3 class="product__title">Desinfetante Cheiro de Rico</h3>
+                        <p class="product__subtitle">Fragrância sofisticada premium</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Desinfetante com fragrância sofisticada e marcante, ideal para ambientes que exigem requinte.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-star product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância sofisticada</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-crown product__item-icon"></i>
+                                    <span class="product__item-text">Linha premium</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LINHA AUTOMOTIVA - HARMONIEX -->
+                <!-- Lava Autos -->
+                <div class="product__card" data-category="automotiva">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Automotiva</span>
+                        <i class="fas fa-car product__icon"></i>
+                        <h3 class="product__title">Lava Autos Harmoniex</h3>
+                        <p class="product__subtitle">Limpeza profissional automotiva</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Shampoo automotivo profissional para limpeza completa de veículos sem agredir a pintura.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-palette product__item-icon"></i>
+                                    <span class="product__item-text">Não agride a pintura</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-soap product__item-icon"></i>
+                                    <span class="product__item-text">Espuma densa</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LINHA CLORADOS - HARMONIEX -->
+                <!-- Água Sanitária -->
+                <div class="product__card" data-category="clorados">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Clorados</span>
+                        <i class="fas fa-tint product__icon"></i>
+                        <h3 class="product__title">Água Sanitária Harmoniex</h3>
+                        <p class="product__subtitle">Branqueamento e desinfecção</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Água sanitária de alta qualidade para branqueamento e desinfecção com máxima eficácia.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-sun product__item-icon"></i>
+                                    <span class="product__item-text">Branqueamento potente</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bacteria product__item-icon"></i>
+                                    <span class="product__item-text">Elimina bactérias</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cloro Líquido -->
+                <div class="product__card" data-category="clorados">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Clorados</span>
+                        <i class="fas fa-flask product__icon"></i>
+                        <h3 class="product__title">Cloro Líquido Harmoniex</h3>
+                        <p class="product__subtitle">Desinfecção poderosa</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Cloro líquido concentrado para desinfecção e limpeza pesada em ambientes que exigem máxima higiene.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-flask product__item-icon"></i>
+                                    <span class="product__item-text">Fórmula concentrada</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-virus-slash product__item-icon"></i>
+                                    <span class="product__item-text">Desinfecção máxima</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cloro Gel -->
+                <div class="product__card" data-category="clorados">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Clorados</span>
+                        <i class="fas fa-droplet product__icon"></i>
+                        <h3 class="product__title">Cloro Gel Harmoniex</h3>
+                        <p class="product__subtitle">Aderência superior</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Cloro em gel com aderência superior para limpeza vertical e superfícies difíceis.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-droplet product__item-icon"></i>
+                                    <span class="product__item-text">Fórmula gel aderente</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-arrows-alt-v product__item-icon"></i>
+                                    <span class="product__item-text">Ideal para superfícies verticais</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cloro Gel Lavanda -->
+                <div class="product__card" data-category="clorados">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Clorados</span>
+                        <i class="fas fa-leaf product__icon"></i>
+                        <h3 class="product__title">Cloro Gel Lavanda Harmoniex</h3>
+                        <p class="product__subtitle">Com fragrância de lavanda</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Cloro gel com fragrância suave de lavanda, combina desinfecção poderosa com perfume agradável.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância lavanda</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-droplet product__item-icon"></i>
+                                    <span class="product__item-text">Fórmula gel aderente</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LINHA HIGIENE - HARMONIEX -->
+                <!-- Sabonete Líquido Frutas Vermelhas -->
+                <div class="product__card" data-category="higiene">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Higiene</span>
+                        <i class="fas fa-hands-wash product__icon"></i>
+                        <h3 class="product__title">Sabonete Líquido Frutas Vermelhas</h3>
+                        <p class="product__subtitle">Fragrância doce e envolvente</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Sabonete líquido com fragrância de frutas vermelhas, ideal para higiene das mãos com maciez.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-apple-alt product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância frutas vermelhas</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-hand-holding-heart product__item-icon"></i>
+                                    <span class="product__item-text">Cuidado com as mãos</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sabonete Líquido Erva Doce -->
+                <div class="product__card" data-category="higiene">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Higiene</span>
+                        <i class="fas fa-seedling product__icon"></i>
+                        <h3 class="product__title">Sabonete Líquido Erva Doce</h3>
+                        <p class="product__subtitle">Suavidade natural</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Sabonete líquido com extratos naturais de erva doce, proporciona limpeza suave e hidratação.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-leaf product__item-icon"></i>
+                                    <span class="product__item-text">Extratos naturais</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-tint product__item-icon"></i>
+                                    <span class="product__item-text">Hidratação da pele</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sabonete Líquido Buquê Azul -->
+                <div class="product__card" data-category="higiene">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Higiene</span>
+                        <i class="fas fa-seedling product__icon"></i>
+                        <h3 class="product__title">Sabonete Líquido Buquê Azul</h3>
+                        <p class="product__subtitle">Fragrância floral delicada</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Sabonete líquido com fragrância floral de buquê azul, oferece limpeza delicada e perfume suave.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-flower product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância floral</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-heart product__item-icon"></i>
+                                    <span class="product__item-text">Perfume delicado</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sabonete Líquido Pistache -->
+                <div class="product__card" data-category="higiene">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Higiene</span>
+                        <i class="fas fa-seedling product__icon"></i>
+                        <h3 class="product__title">Sabonete Líquido Pistache</h3>
+                        <p class="product__subtitle">Fragrância única e sofisticada</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Sabonete líquido com fragrância única de pistache, combinando sofisticação e cuidado especial.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-star product__item-icon"></i>
+                                    <span class="product__item-text">Fragrância única</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-gem product__item-icon"></i>
+                                    <span class="product__item-text">Toque sofisticado</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LINHA LIMPEZA GERAL - HARMONIEX -->
+                <!-- Limpador Multiuso -->
+                <div class="product__card" data-category="geral">
+                    <div class="product__header">
+                        <span class="category-badge">Linha Limpeza Geral</span>
+                        <i class="fas fa-broom product__icon"></i>
+                        <h3 class="product__title">Limpador Multiuso Harmoniex</h3>
+                        <p class="product__subtitle">Versatilidade para toda casa</p>
+                    </div>
+                    <div class="product__content">
+                        <p class="product__description">
+                            Produto versátil para limpeza de diversas superfícies, com eficácia comprovada e praticidade total.
+                        </p>
+                        <div class="product__list">
+                            <h4 class="product__list-title">Características:</h4>
+                            <div class="product__items">
+                                <div class="product__item">
+                                    <i class="fas fa-magic product__item-icon"></i>
+                                    <span class="product__item-text">Múltiplas superfícies</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-check-circle product__item-icon"></i>
+                                    <span class="product__item-text">Praticidade total</span>
+                                </div>
+                                <div class="product__item">
+                                    <i class="fas fa-bottle-water product__item-icon"></i>
+                                    <span class="product__item-text">Disponível 2L / 5L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__footer">
+                        <a href="index-completo.html#contact" class="button button__primary product__button">
+                            <i class="fas fa-shopping-cart"></i>
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrinho de Compras Flutuante -->
+    <button class="cart-icon" onclick="openCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge" id="cart-badge">0</span>
+    </button>
+
+    <!-- Modal do Carrinho -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2 class="cart-title">🛒 Carrinho de Compras</h2>
+                <button class="modal-close" onclick="closeCart()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-body" id="cart-body">
+                <div class="cart-empty" id="cart-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Seu carrinho está vazio</p>
+                    <small>Adicione produtos para começar sua compra</small>
+                </div>
+                <div id="cart-items"></div>
+            </div>
+            <div class="cart-footer" id="cart-footer" style="display: none;">
+                <div class="cart-total" id="cart-total">
+                    Total: <span id="cart-count">0</span> itens
+                </div>
+                <button class="checkout-btn" onclick="openCheckoutForm()">
+                    <i class="fas fa-check"></i>
+                    Finalizar Compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta__title">Precisa de um Orçamento Personalizado?</h2>
+            <p class="cta__description">
+                Entre em contato conosco e solicite um orçamento gratuito para seus produtos de limpeza
+            </p>
+            <a href="index-completo.html#contact" class="button cta__button">
+                <i class="fas fa-envelope"></i>
+                Solicitar Orçamento Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__group">
+                    <a href="index-completo.html" class="footer__logo">
+                        <img src="images/logo.png" alt="Axyon Clean" class="footer__logo-img">
+                        <span class="footer__logo-text">Axyon Clean</span>
+                    </a>
+                    <p class="footer__description">
+                        Transformando ambientes através de produtos de limpeza de qualidade. 
+                        Excelência, confiança e inovação em cada produto.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__group">
+                    <h3 class="footer__title">Navegação</h3>
+                    <ul class="footer__links">
+                        <li><a href="index-completo.html#home" class="footer__link">Início</a></li>
+                        <li><a href="index-completo.html#about" class="footer__link">Sobre Nós</a></li>
+                        <li><a href="produtos.html" class="footer__link">Produtos</a></li>
+                        <li><a href="index-completo.html#contact" class="footer__link">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__group">
+                    <h3 class="footer__title">Categorias</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Linha Cozinha</a></li>
+                        <li><a href="#" class="footer__link">Linha Lavanderia</a></li>
+                        <li><a href="#" class="footer__link">Linha Desinfecção</a></li>
+                        <li><a href="#" class="footer__link">Linha Automotiva</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__group">
+                    <h3 class="footer__title">Contato</h3>
+                    <div class="footer__info">
+                        <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                        <p><i class="fas fa-envelope"></i> contato@axyonclean.com.br</p>
+                        <p><i class="fas fa-map-marker-alt"></i> São Paulo - SP</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    &copy; 2024 Axyon Clean. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Up Button -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="fas fa-angle-up scrollup__icon"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        /*==================== NAVIGATION MENU ====================*/
+        const navMenu = document.getElementById('nav-menu');
+        const navToggle = document.getElementById('nav-toggle');
+        const navClose = document.getElementById('nav-close');
+
+        // Menu show
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.add('show-menu');
+            });
+        }
+
+        // Menu hidden
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu');
+            });
+        }
+
+        // Remove menu mobile
+        const navLinks = document.querySelectorAll('.nav__link');
+        function linkAction() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.remove('show-menu');
+        }
+        navLinks.forEach(n => n.addEventListener('click', linkAction));
+
+        /*==================== SCROLL UP ====================*/
+        function scrollUp() {
+            const scrollUp = document.getElementById('scroll-up');
+            if (this.scrollY >= 350) {
+                scrollUp.classList.add('show-scroll');
+            } else {
+                scrollUp.classList.remove('show-scroll');
+            }
+        }
+        window.addEventListener('scroll', scrollUp);
+
+        /*==================== PRODUCT FILTER ====================*/
+        const filterButtons = document.querySelectorAll('.filter__button');
+        const productCards = document.querySelectorAll('.product__card');
+        const categorySections = document.querySelectorAll('.category-section');
+
+        function filterProducts(filterValue) {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to the correct button
+            const activeButton = document.querySelector(`[data-filter="${filterValue}"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+            
+            // Hide all category sections first
+            categorySections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show appropriate category section
+            if (filterValue !== 'all') {
+                const categorySection = document.querySelector(`#${filterValue}-section`);
+                if (categorySection) {
+                    categorySection.classList.add('active');
+                }
+            } else {
+                // Show all category sections when "all" is selected
+                categorySections.forEach(section => {
+                    section.classList.add('active');
+                });
+            }
+            
+            // Filter products
+            productCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || category === filterValue) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Handle filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                filterProducts(filter);
+            });
+        });
+
+        // Check URL parameters for filter on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const filter = urlParams.get('categoria') || 'all';
+            filterProducts(filter);
+        });
+
+        /*==================== SMOOTH SCROLLING ====================*/
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        /*==================== SCROLL ANIMATIONS ====================*/
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe product cards for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.product__card');
+            animateElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        /*==================== WHATSAPP FLOATING BUTTON ====================*/
+        function createWhatsAppButton() {
+            const whatsappBtn = document.createElement('a');
+            whatsappBtn.href = 'https://wa.me/5511999999999?text=Olá! Gostaria de solicitar um orçamento para produtos de limpeza.';
+            whatsappBtn.target = '_blank';
+            whatsappBtn.className = 'whatsapp-float';
+            whatsappBtn.style.cssText = `
+                position: fixed;
+                width: 60px;
+                height: 60px;
+                bottom: 100px;
+                right: 1rem;
+                background-color: #25d366;
+                color: white;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 1.5rem;
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                text-decoration: none;
+            `;
+            whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+            
+            whatsappBtn.addEventListener('mouseenter', () => {
+                whatsappBtn.style.transform = 'scale(1.1)';
+                whatsappBtn.style.boxShadow = '0 6px 16px rgba(37, 211, 102, 0.6)';
+            });
+            
+            whatsappBtn.addEventListener('mouseleave', () => {
+                whatsappBtn.style.transform = 'scale(1)';
+                whatsappBtn.style.boxShadow = '0 4px 12px rgba(37, 211, 102, 0.4)';
+            });
+            
+            document.body.appendChild(whatsappBtn);
+        }
+
+        document.addEventListener('DOMContentLoaded', createWhatsAppButton);
+
+        /*==================== SHOPPING CART SYSTEM ====================*/
+        let cart = JSON.parse(localStorage.getItem('axyon-cart')) || [];
+
+        // Atualizar badge do carrinho
+        function updateCartBadge() {
+            const badge = document.getElementById('cart-badge');
+            const totalItems = cart.reduce((acc, item) => acc + item.quantidade, 0);
+            badge.textContent = totalItems;
+            badge.style.display = totalItems > 0 ? 'flex' : 'none';
+        }
+
+        // Adicionar produto ao carrinho
+        function addToCart(id, nome, categoria, icone) {
+            console.log('🛒 Adicionando ao carrinho:', nome);
+            
+            const existingItem = cart.find(item => item.id === id);
+            
+            if (existingItem) {
+                existingItem.quantidade += 1;
+            } else {
+                cart.push({
+                    id,
+                    nome,
+                    categoria,
+                    icone,
+                    quantidade: 1
+                });
+            }
+            
+            localStorage.setItem('axyon-cart', JSON.stringify(cart));
+            updateCartBadge();
+            
+            // Mostrar feedback visual
+            showCartNotification(`${nome} adicionado ao carrinho!`);
+        }
+
+        // Remover produto do carrinho
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            localStorage.setItem('axyon-cart', JSON.stringify(cart));
+            updateCartBadge();
+            updateCartDisplay();
+        }
+
+        // Alterar quantidade
+        function changeQuantity(id, change) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.quantidade += change;
+                if (item.quantidade <= 0) {
+                    removeFromCart(id);
+                } else {
+                    localStorage.setItem('axyon-cart', JSON.stringify(cart));
+                    updateCartBadge();
+                    updateCartDisplay();
+                }
+            }
+        }
+
+        // Abrir carrinho
+        function openCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            updateCartDisplay();
+        }
+
+        // Fechar carrinho
+        function closeCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Atualizar exibição do carrinho
+        function updateCartDisplay() {
+            const cartEmpty = document.getElementById('cart-empty');
+            const cartItems = document.getElementById('cart-items');
+            const cartFooter = document.getElementById('cart-footer');
+            const cartCount = document.getElementById('cart-count');
+            
+            if (cart.length === 0) {
+                cartEmpty.style.display = 'block';
+                cartItems.innerHTML = '';
+                cartFooter.style.display = 'none';
+            } else {
+                cartEmpty.style.display = 'none';
+                cartFooter.style.display = 'block';
+                
+                const totalItems = cart.reduce((acc, item) => acc + item.quantidade, 0);
+                cartCount.textContent = totalItems;
+                
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <i class="${item.icone}"></i>
+                        </div>
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.nome}</div>
+                            <div class="cart-item-category">${item.categoria}</div>
+                        </div>
+                        <div class="cart-item-controls">
+                            <button class="quantity-btn" onclick="changeQuantity('${item.id}', -1)">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="quantity-display">${item.quantidade}</span>
+                            <button class="quantity-btn" onclick="changeQuantity('${item.id}', 1)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <button class="remove-btn" onclick="removeFromCart('${item.id}')">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Mostrar notificação
+        function showCartNotification(message) {
+            // Criar elemento de notificação
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #27ae60;
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                z-index: 9999;
+                font-weight: 500;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                animation: slideInRight 0.3s ease;
+            `;
+            notification.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            
+            document.body.appendChild(notification);
+            
+            // Remover após 3 segundos
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        // Formulário de checkout
+        function openCheckoutForm() {
+            if (cart.length === 0) return;
+            
+            const checkoutHtml = `
+                <div class="checkout-modal" style="
+                    position: fixed;
+                    z-index: 1002;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.9);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+                ">
+                    <div style="
+                        background: white;
+                        border-radius: 12px;
+                        max-width: 600px;
+                        width: 100%;
+                        max-height: 90vh;
+                        overflow-y: auto;
+                    ">
+                        <div style="padding: 2rem; border-bottom: 1px solid #eee;">
+                            <h2 style="margin: 0; color: #2c3e50;">📋 Finalizar Compra</h2>
+                        </div>
+                        <form id="checkout-form" style="padding: 2rem;">
+                            <div style="display: grid; gap: 1rem;">
+                                <div>
+                                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Nome Completo *</label>
+                                    <input type="text" name="nome" required style="
+                                        width: 100%;
+                                        padding: 0.75rem;
+                                        border: 2px solid #e0e6ed;
+                                        border-radius: 8px;
+                                        font-size: 1rem;
+                                    ">
+                                </div>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                    <div>
+                                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email *</label>
+                                        <input type="email" name="email" required style="
+                                            width: 100%;
+                                            padding: 0.75rem;
+                                            border: 2px solid #e0e6ed;
+                                            border-radius: 8px;
+                                            font-size: 1rem;
+                                        ">
+                                    </div>
+                                    <div>
+                                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Telefone *</label>
+                                        <input type="tel" name="telefone" required style="
+                                            width: 100%;
+                                            padding: 0.75rem;
+                                            border: 2px solid #e0e6ed;
+                                            border-radius: 8px;
+                                            font-size: 1rem;
+                                        ">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Empresa</label>
+                                    <input type="text" name="empresa" style="
+                                        width: 100%;
+                                        padding: 0.75rem;
+                                        border: 2px solid #e0e6ed;
+                                        border-radius: 8px;
+                                        font-size: 1rem;
+                                    ">
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Endereço de Entrega</label>
+                                    <textarea name="endereco" rows="3" style="
+                                        width: 100%;
+                                        padding: 0.75rem;
+                                        border: 2px solid #e0e6ed;
+                                        border-radius: 8px;
+                                        font-size: 1rem;
+                                        resize: vertical;
+                                    "></textarea>
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Observações</label>
+                                    <textarea name="observacoes" rows="3" placeholder="Informações adicionais sobre o pedido..." style="
+                                        width: 100%;
+                                        padding: 0.75rem;
+                                        border: 2px solid #e0e6ed;
+                                        border-radius: 8px;
+                                        font-size: 1rem;
+                                        resize: vertical;
+                                    "></textarea>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                                <button type="button" onclick="closeCheckoutForm()" style="
+                                    flex: 1;
+                                    padding: 1rem;
+                                    border: 2px solid #e0e6ed;
+                                    background: white;
+                                    border-radius: 8px;
+                                    cursor: pointer;
+                                    font-weight: 600;
+                                ">Cancelar</button>
+                                <button type="submit" style="
+                                    flex: 2;
+                                    padding: 1rem;
+                                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                    color: white;
+                                    border: none;
+                                    border-radius: 8px;
+                                    cursor: pointer;
+                                    font-weight: 600;
+                                ">📱 Enviar para WhatsApp</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', checkoutHtml);
+            
+            // Adicionar evento de submit
+            document.getElementById('checkout-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                processCheckout(new FormData(this));
+            });
+        }
+
+        // Fechar formulário de checkout
+        function closeCheckoutForm() {
+            const modal = document.querySelector('.checkout-modal');
+            if (modal) {
+                modal.remove();
+            }
+        }
+
+        // Processar checkout
+        async function processCheckout(formData) {
+            const cliente = {
+                nome: formData.get('nome'),
+                email: formData.get('email'),
+                telefone: formData.get('telefone'),
+                empresa: formData.get('empresa'),
+                endereco: formData.get('endereco')
+            };
+            
+            const pedido = {
+                cliente,
+                produtos: cart,
+                total: cart.reduce((acc, item) => acc + item.quantidade, 0),
+                observacoes: formData.get('observacoes')
+            };
+            
+            try {
+                // Gerar mensagem do WhatsApp
+                let mensagem = `🛒 *NOVO PEDIDO - AXYON CLEAN*\n\n`;
+                mensagem += `👤 *CLIENTE:*\n`;
+                mensagem += `• Nome: ${cliente.nome}\n`;
+                mensagem += `• Email: ${cliente.email}\n`;
+                mensagem += `• Telefone: ${cliente.telefone}\n`;
+                
+                if (cliente.empresa) {
+                    mensagem += `• Empresa: ${cliente.empresa}\n`;
+                }
+                
+                if (cliente.endereco) {
+                    mensagem += `• Endereço: ${cliente.endereco}\n`;
+                }
+                
+                mensagem += `\n📦 *PRODUTOS SOLICITADOS:*\n`;
+                
+                cart.forEach((produto, index) => {
+                    mensagem += `${index + 1}. ${produto.nome}\n`;
+                    mensagem += `   📋 Categoria: ${produto.categoria}\n`;
+                    mensagem += `   📊 Quantidade: ${produto.quantidade} unidades\n\n`;
+                });
+                
+                mensagem += `📊 *RESUMO:*\n`;
+                mensagem += `• Total de itens: ${cart.length}\n`;
+                mensagem += `• Total de unidades: ${cart.reduce((acc, p) => acc + p.quantidade, 0)}\n`;
+                
+                if (pedido.observacoes) {
+                    mensagem += `\n💬 *OBSERVAÇÕES:*\n${pedido.observacoes}\n`;
+                }
+                
+                mensagem += `\n📅 *Data do Pedido:* ${new Date().toLocaleString('pt-BR')}\n`;
+                mensagem += `✅ *Aguardando orçamento*`;
+                
+                // Abrir WhatsApp
+                const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(mensagem)}`;
+                window.open(whatsappUrl, '_blank');
+                
+                // Limpar carrinho
+                cart = [];
+                localStorage.removeItem('axyon-cart');
+                updateCartBadge();
+                
+                // Fechar modais
+                closeCheckoutForm();
+                closeCart();
+                
+                // Mostrar sucesso
+                showCartNotification('Pedido enviado para WhatsApp com sucesso!');
+                
+            } catch (error) {
+                console.error('Erro ao processar pedido:', error);
+                alert('Erro ao enviar pedido. Tente novamente.');
+            }
+        }
+
+        // Inicializar carrinho
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartBadge();
+            
+            // Fechar carrinho clicando fora
+            document.getElementById('cart-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeCart();
+                }
+            });
+        });
+
+        /*==================== FIX BUTTONS E IMAGES TEMPORARIAMENTE ====================*/
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aguardar um pouco para garantir que tudo foi carregado
+            setTimeout(() => {
+                // Encontrar todos os links de "Solicitar Orçamento"
+                const buttons = document.querySelectorAll('a[href="index-completo.html#contact"].button.button__primary.product__button');
+                
+                buttons.forEach(button => {
+                    // Verificar se é um botão de "Solicitar Orçamento"
+                    if (button.textContent.trim().includes('Solicitar Orçamento')) {
+                        // Criar novo botão
+                        const newButton = document.createElement('button');
+                        newButton.className = 'button button__primary product__button';
+                        newButton.onclick = function() { openProductModal('produto-generico'); };
+                        newButton.innerHTML = '<i class="fas fa-info-circle"></i> Saiba Mais';
+                        
+                        // Substituir o botão antigo
+                        button.parentNode.replaceChild(newButton, button);
+                    }
+                });
+
+                // Adicionar imagens aos produtos que não têm
+                const productCards = document.querySelectorAll('.product__card');
+                productCards.forEach(card => {
+                    // Verificar se o card já tem imagem
+                    if (!card.querySelector('.product__image')) {
+                        const header = card.querySelector('.product__header');
+                        const icon = header.querySelector('.product__icon');
+                        
+                        if (icon && header) {
+                            // Extrair o ícone
+                            const iconClass = icon.className;
+                            
+                            // Criar div de imagem
+                            const imageDiv = document.createElement('div');
+                            imageDiv.className = 'product__image';
+                            imageDiv.innerHTML = `
+                                <div class="product__image-placeholder">
+                                    <i class="${iconClass}"></i>
+                                </div>
+                            `;
+                            
+                            // Inserir antes do header
+                            card.insertBefore(imageDiv, header);
+                            
+                            // Remover o ícone do header
+                            icon.remove();
+                        }
+                    }
+                });
+            }, 100);
+        });
+
+        /*==================== PRODUCT MODAL ====================*/
+        // Dados detalhados dos produtos com SEO
+        const productData = {
+            'lava-loucas': {
+                title: 'Lava Louças Harmoniex - Detergente Profissional Concentrado',
+                category: 'Linha Cozinha',
+                image: 'images/produtos/lava-loucas.jpg', // Adicionar imagem quando disponível
+                icon: 'fas fa-utensils',
+                description: `O Lava Louças Harmoniex é um detergente profissional concentrado desenvolvido especialmente para a limpeza eficiente de louças, utensílios de cozinha e equipamentos gastronômicos. Sua fórmula biodegradável e concentrada garante alta performance na remoção de gorduras, alimentos grudados e resíduos, proporcionando brilho e limpeza impecável.
+
+                Este produto de limpeza profissional para cozinha é ideal para restaurantes, cozinhas industriais, residências e estabelecimentos que exigem padrões elevados de higiene e limpeza. A fórmula concentrada do detergente Harmoniex oferece excelente custo-benefício, rendendo mais lavagens por embalagem.
+
+                Com pH balanceado e ingredientes que respeitam o meio ambiente, o Lava Louças Harmoniex remove gorduras persistentes sem agredir as mãos ou os utensílios, mantendo louças, panelas e talheres com brilho natural e livres de resíduos químicos.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em embalagens de 2L e 5L' },
+                    { icon: 'fas fa-leaf', text: 'Fórmula 100% biodegradável e ecológica' },
+                    { icon: 'fas fa-fire', text: 'Alta performance na remoção de gorduras' },
+                    { icon: 'fas fa-sparkles', text: 'Proporciona brilho natural às louças' },
+                    { icon: 'fas fa-shield-alt', text: 'pH balanceado, não agride as mãos' },
+                    { icon: 'fas fa-dollar-sign', text: 'Fórmula concentrada - maior rendimento' },
+                    { icon: 'fas fa-check-circle', text: 'Aprovado para uso profissional' }
+                ]
+            },
+            'desengordurante': {
+                title: 'Desengordurante Harmoniex - Removedor Potente de Gorduras',
+                category: 'Linha Cozinha',
+                image: 'images/produtos/desengordurante.jpg',
+                icon: 'fas fa-fire',
+                description: `O Desengordurante Harmoniex é um produto de limpeza pesada especializado na remoção de gorduras extremamente aderidas em cozinhas profissionais e domésticas. Sua fórmula potente dissolve rapidamente gorduras queimadas, óleos carbonizados e resíduos alimentares em fogões, fornos, coifas, grelhas e demais equipamentos de cozinha.
+
+                Este desengordurante profissional é essencial para manutenção de cozinhas industriais, restaurantes, lanchonetes e residências, garantindo a higienização completa de superfícies e equipamentos. O produto Harmoniex oferece ação rápida e eficaz, reduzindo o tempo de limpeza e o esforço físico necessário.
+
+                Desenvolvido com tecnologia avançada para limpeza pesada, o Desengordurante Harmoniex penetra profundamente nas gorduras mais resistentes, facilitando a remoção sem danificar as superfícies metálicas ou revestimentos dos equipamentos de cozinha.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Embalagens de 2L e 5L disponíveis' },
+                    { icon: 'fas fa-fire', text: 'Remove gorduras queimadas e carbonizadas' },
+                    { icon: 'fas fa-bolt', text: 'Ação rápida e penetrante' },
+                    { icon: 'fas fa-clock', text: 'Reduz tempo de limpeza significativamente' },
+                    { icon: 'fas fa-shield-alt', text: 'Não danifica superfícies metálicas' },
+                    { icon: 'fas fa-industry', text: 'Ideal para uso profissional' },
+                    { icon: 'fas fa-star', text: 'Máxima eficiência em limpeza pesada' }
+                ]
+            },
+            'limpa-aluminio': {
+                title: 'Limpa Alumínio Harmoniex - Restaurador Especializado',
+                category: 'Linha Cozinha',
+                image: 'images/produtos/limpa-aluminio.jpg',
+                icon: 'fas fa-gem',
+                description: `O Limpa Alumínio Harmoniex é um produto especializado para limpeza, restauração e proteção de utensílios e superfícies de alumínio. Sua fórmula exclusiva remove manchas, oxidação, riscos superficiais e devolve o brilho original do alumínio sem causar corrosão ou danos ao material.
+
+                Este produto é fundamental para manutenção de panelas de alumínio, assadeiras, formas, equipamentos industriais e estruturas de alumínio em geral. O Limpa Alumínio Harmoniex proporciona limpeza profunda e proteção duradoura, evitando o escurecimento e prolongando a vida útil dos utensílios.
+
+                Desenvolvido especificamente para as características do alumínio, este limpador especializado remove resíduos de alimentos, gorduras e sujidades sem agredir o metal, mantendo a integridade e aparência dos seus utensílios de cozinha por muito mais tempo.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-gem', text: 'Restaura brilho original do alumínio' },
+                    { icon: 'fas fa-shield', text: 'Não causa corrosão ou danos' },
+                    { icon: 'fas fa-sparkles', text: 'Remove manchas e oxidação' },
+                    { icon: 'fas fa-clock', text: 'Proteção duradoura' },
+                    { icon: 'fas fa-utensils', text: 'Ideal para panelas e utensílios' },
+                    { icon: 'fas fa-certificate', text: 'Fórmula especializada e segura' }
+                ]
+            },
+            'soluupamm': {
+                title: 'Soluupamm Harmoniex - Solução Universal de Limpeza',
+                category: 'Linha Cozinha',
+                image: 'images/produtos/soluupamm.jpg',
+                icon: 'fas fa-spray-can',
+                description: `O Soluupamm Harmoniex é um produto versátil para limpeza geral de cozinhas, eficaz em diversas superfícies e equipamentos. Desenvolvido para proporcionar máxima praticidade na rotina de limpeza, este produto universal atende múltiplas necessidades com excelente custo-benefício.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-magic', text: 'Múltiplas superfícies' },
+                    { icon: 'fas fa-check-circle', text: 'Praticidade total' },
+                    { icon: 'fas fa-star', text: 'Fórmula universal eficaz' }
+                ]
+            },
+            'flotador': {
+                title: 'Flotador Harmoniex - Limpeza com Ação Flotante',
+                category: 'Linha Cozinha',
+                image: 'images/produtos/flotador.jpg',
+                icon: 'fas fa-bubbles',
+                description: `O Flotador Harmoniex utiliza tecnologia especial para limpeza profunda com ação flotante, ideal para equipamentos de cozinha. Sua fórmula inovadora proporciona limpeza eficaz com mínimo esforço.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-water', text: 'Tecnologia flotante' },
+                    { icon: 'fas fa-tools', text: 'Ideal para equipamentos' },
+                    { icon: 'fas fa-magic', text: 'Ação especial eficiente' }
+                ]
+            },
+            'lava-roupas-blue': {
+                title: 'Lava Roupas Blue Harmoniex - Fragrância Blue Duradoura',
+                category: 'Linha Lavanderia',
+                image: 'images/produtos/lava-roupas-blue.jpg',
+                icon: 'fas fa-tshirt',
+                description: `O Lava Roupas Blue Harmoniex é um sabão líquido concentrado com fragrância blue exclusiva, ideal para roupas delicadas e coloridas. Proporciona limpeza suave e perfume duradouro.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-heart', text: 'Fragrância blue duradoura' },
+                    { icon: 'fas fa-palette', text: 'Proteção das cores' },
+                    { icon: 'fas fa-star', text: 'Fórmula concentrada' }
+                ]
+            },
+            'lava-roupas-coco': {
+                title: 'Lava Roupas Coco Harmoniex - Com Óleo de Coco Natural',
+                category: 'Linha Lavanderia',
+                image: 'images/produtos/lava-roupas-coco.jpg',
+                icon: 'fas fa-seedling',
+                description: `O Lava Roupas Coco Harmoniex é enriquecido com óleo de coco natural, proporcionando maciez natural e limpeza suave às roupas. Ideal para quem busca cuidado natural com as peças.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-leaf', text: 'Óleo de coco natural' },
+                    { icon: 'fas fa-feather', text: 'Maciez natural' },
+                    { icon: 'fas fa-heart', text: 'Cuidado especial' }
+                ]
+            },
+            'lava-roupas-power-green': {
+                title: 'Lava Roupas Power Green - Poder Concentrado Ecológico',
+                category: 'Linha Lavanderia',
+                image: 'images/produtos/lava-roupas-power-green.jpg',
+                icon: 'fas fa-bolt',
+                description: `O Lava Roupas Power Green é um sabão líquido ecológico de alta performance, com fórmula concentrada e ingredientes sustentáveis. Combina eficiência na limpeza com responsabilidade ambiental.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-recycle', text: 'Fórmula ecológica' },
+                    { icon: 'fas fa-bolt', text: 'Alta performance' },
+                    { icon: 'fas fa-leaf', text: 'Ingredientes sustentáveis' }
+                ]
+            },
+            'amaciante-premium': {
+                title: 'Amaciante Premium Harmoniex - Linha Premium de Maciez',
+                category: 'Linha Lavanderia',
+                image: 'images/produtos/amaciante-premium.jpg',
+                icon: 'fas fa-star',
+                description: `O Amaciante Premium Harmoniex oferece fragrância sofisticada e maciez excepcional para roupas delicadas. Produto de linha premium para quem exige o melhor cuidado com suas peças.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-crown', text: 'Linha premium' },
+                    { icon: 'fas fa-feather', text: 'Maciez excepcional' },
+                    { icon: 'fas fa-star', text: 'Fragrância sofisticada' }
+                ]
+            },
+            'amaciante-blue': {
+                title: 'Amaciante Blue Harmoniex - Fragrância Blue Envolvente',
+                category: 'Linha Lavanderia',
+                image: 'images/produtos/amaciante-blue.jpg',
+                icon: 'fas fa-droplet',
+                description: `O Amaciante Blue Harmoniex proporciona fragrância blue envolvente e perfume duradouro. Ideal para quem aprecia aromas marcantes e maciez especial nas roupas.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-heart', text: 'Fragrância blue envolvente' },
+                    { icon: 'fas fa-clock', text: 'Perfume duradouro' },
+                    { icon: 'fas fa-star', text: 'Maciez especial' }
+                ]
+            },
+            'alvejante-sem-cloro': {
+                title: 'Alvejante sem Cloro Harmoniex - Branqueamento Seguro',
+                category: 'Linha Lavanderia',
+                image: 'images/produtos/alvejante-sem-cloro.jpg',
+                icon: 'fas fa-sun',
+                description: `O Alvejante sem Cloro Harmoniex oferece branqueamento eficaz sem cloro, sendo seguro para roupas coloridas. Proporciona alvejamento suave e proteção das fibras.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-leaf', text: 'Sem cloro' },
+                    { icon: 'fas fa-shield-alt', text: 'Seguro para cores' },
+                    { icon: 'fas fa-star', text: 'Alvejamento eficaz' }
+                ]
+            },
+            'passa-facil': {
+                title: 'Passa Fácil Harmoniex - Facilita o Passar Roupas',
+                category: 'Linha Lavanderia',
+                image: 'images/produtos/passa-facil.jpg',
+                icon: 'fas fa-iron',
+                description: `O Passa Fácil Harmoniex reduz rugas e facilita o processo de passar roupas, economizando tempo e esforço. Produto essencial para cuidado completo das peças.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Embalagem 2L' },
+                    { icon: 'fas fa-magic', text: 'Reduz rugas' },
+                    { icon: 'fas fa-clock', text: 'Economiza tempo' },
+                    { icon: 'fas fa-star', text: 'Facilita passar' }
+                ]
+            },
+            'limpa-pisos': {
+                title: 'Limpa Pisos Harmoniex - Limpeza e Brilho para Pisos',
+                category: 'Linha Casa',
+                image: 'images/produtos/limpa-pisos.jpg',
+                icon: 'fas fa-mountain',
+                description: `O Limpa Pisos Harmoniex proporciona limpeza eficaz e mantém o brilho natural dos pisos, com proteção da superfície. Ideal para manutenção diária de diversos tipos de piso.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-gem', text: 'Mantém o brilho' },
+                    { icon: 'fas fa-shield-alt', text: 'Proteção da superfície' },
+                    { icon: 'fas fa-star', text: 'Limpeza eficaz' }
+                ]
+            },
+            'limpa-porcelanatos': {
+                title: 'Limpa Porcelanatos Harmoniex - Especializado para Porcelanato',
+                category: 'Linha Casa',
+                image: 'images/produtos/limpa-porcelanatos.jpg',
+                icon: 'fas fa-square',
+                description: `O Limpa Porcelanatos Harmoniex é específico para porcelanato, preservando características originais e proporcionando limpeza especializada sem danos ao material.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-star', text: 'Específico para porcelanato' },
+                    { icon: 'fas fa-eye', text: 'Preserva características' },
+                    { icon: 'fas fa-shield', text: 'Proteção especializada' }
+                ]
+            },
+            'pinho-gel': {
+                title: 'Pinho Gel Harmoniex - Fragrância Pinho Natural',
+                category: 'Linha Casa',
+                image: 'images/produtos/pinho-gel.jpg',
+                icon: 'fas fa-tree',
+                description: `O Pinho Gel Harmoniex oferece limpeza eficaz com fragrância natural de pinho e fórmula gel que proporciona maior aderência e tempo de ação.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-leaf', text: 'Fragrância natural de pinho' },
+                    { icon: 'fas fa-droplet', text: 'Fórmula gel' },
+                    { icon: 'fas fa-star', text: 'Limpeza duradoura' }
+                ]
+            },
+            'limpa-pedras': {
+                title: 'Limpa Pedras Harmoniex - Cuidado Especial para Pedras',
+                category: 'Linha Casa',
+                image: 'images/produtos/limpa-pedras.jpg',
+                icon: 'fas fa-gem',
+                description: `O Limpa Pedras Harmoniex oferece cuidado especial para pedras naturais, com conservação especializada que preserva a beleza e características originais.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em 2L e 5L' },
+                    { icon: 'fas fa-mountain', text: 'Para pedras naturais' },
+                    { icon: 'fas fa-shield-alt', text: 'Conservação especial' },
+                    { icon: 'fas fa-star', text: 'Preserva características' }
+                ]
+            },
+            'cera-liquida': {
+                title: 'Cera Líquida Premium - Proteção e Brilho Duradouro',
+                category: 'Linha Casa',
+                image: 'images/produtos/cera-liquida.jpg',
+                icon: 'fas fa-mountain',
+                description: `A Cera Líquida Premium oferece proteção e brilho duradouro para pisos, com tecnologia anti-derrapante que garante segurança e elegância.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Múltiplas embalagens' },
+                    { icon: 'fas fa-gem', text: 'Brilho duradouro' },
+                    { icon: 'fas fa-walking', text: 'Anti-derrapante' },
+                    { icon: 'fas fa-calendar-alt', text: 'Proteção duradoura' }
+                ]
+            },
+            'alcool-70': {
+                title: 'Álcool 70% Profissional - Desinfecção Máxima Garantida',
+                category: 'Linha Higiene',
+                image: 'images/produtos/alcool-70.jpg',
+                icon: 'fas fa-shield-virus',
+                description: `O Álcool 70% Profissional é de grau farmacêutico para desinfecção de superfícies e equipamentos, oferecendo máxima proteção contra vírus e bactérias.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Múltiplas embalagens' },
+                    { icon: 'fas fa-certificate', text: 'Grau farmacêutico' },
+                    { icon: 'fas fa-clock', text: 'Ação rápida' },
+                    { icon: 'fas fa-shield', text: 'Máxima proteção' }
+                ]
+            },
+            'agua-sanitaria': {
+                title: 'Água Sanitária - Branqueamento e Desinfecção',
+                category: 'Linha Higiene',
+                image: 'images/produtos/agua-sanitaria.jpg',
+                icon: 'fas fa-tint',
+                description: `A Água Sanitária de alta concentração é ideal para branqueamento de roupas e desinfecção de superfícies, garantindo higiene máxima.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Múltiplas embalagens' },
+                    { icon: 'fas fa-flask', text: 'Alta concentração' },
+                    { icon: 'fas fa-star', text: 'Branqueamento eficaz' },
+                    { icon: 'fas fa-shield', text: 'Desinfecção completa' }
+                ]
+            },
+            'sabonete-liquido': {
+                title: 'Sabonete Líquido - Higiene e Cuidado das Mãos',
+                category: 'Linha Higiene',
+                image: 'images/produtos/sabonete-liquido.jpg',
+                icon: 'fas fa-hands-wash',
+                description: `O Sabonete Líquido possui pH balanceado e agentes hidratantes para higiene diária das mãos, proporcionando limpeza suave e cuidado especial.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Múltiplas embalagens' },
+                    { icon: 'fas fa-balance-scale', text: 'pH balanceado' },
+                    { icon: 'fas fa-heart', text: 'Agentes hidratantes' },
+                    { icon: 'fas fa-leaf', text: 'Ingredientes naturais' }
+                ]
+            },
+            'desinfetante-lavanda': {
+                title: 'Desinfetante Lavanda Harmoniex - Fragrância Relaxante',
+                category: 'Linha Higiene',
+                image: 'images/produtos/desinfetante-lavanda.jpg',
+                icon: 'fas fa-shield-virus',
+                description: `O Desinfetante Lavanda Harmoniex possui fragrância suave de lavanda e elimina 99,9% dos germes e bactérias, proporcionando higiene e bem-estar.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Múltiplas embalagens' },
+                    { icon: 'fas fa-virus-slash', text: 'Elimina 99,9% germes' },
+                    { icon: 'fas fa-seedling', text: 'Fragrância lavanda' },
+                    { icon: 'fas fa-star', text: 'Aroma relaxante' }
+                ]
+            },
+            'shampoo-automotivo': {
+                title: 'Shampoo Automotivo - Limpeza sem Riscar a Pintura',
+                category: 'Linha Automotiva',
+                image: 'images/produtos/shampoo-automotivo.jpg',
+                icon: 'fas fa-car',
+                description: `O Shampoo Automotivo é especializado para lavagem de veículos, com fórmula que não agride a pintura e proporciona brilho natural.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Múltiplas embalagens' },
+                    { icon: 'fas fa-shield', text: 'Não agride pintura' },
+                    { icon: 'fas fa-sparkles', text: 'Remove sujidades' },
+                    { icon: 'fas fa-eye', text: 'Brilho natural' }
+                ]
+            },
+            'limpador-multiuso': {
+                title: 'Limpador Multiuso - Versatilidade para Toda Casa',
+                category: 'Linha Casa',
+                image: 'images/produtos/limpador-multiuso.jpg',
+                icon: 'fas fa-broom',
+                description: `O Limpador Multiuso é versátil para limpeza de diversas superfícies, com fragrância suave e ação eficaz em toda a casa.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Múltiplas embalagens' },
+                    { icon: 'fas fa-magic', text: 'Múltiplas superfícies' },
+                    { icon: 'fas fa-heart', text: 'Fragrância suave' },
+                    { icon: 'fas fa-check-circle', text: 'Praticidade total' }
+                ]
+            },
+            'produto-generico': {
+                title: 'Produto Harmoniex - Qualidade e Eficiência Garantidas',
+                category: 'Linha Harmoniex',
+                image: 'images/produtos/harmoniex-generico.jpg',
+                icon: 'fas fa-bottle-water',
+                description: `Os produtos da linha Harmoniex são desenvolvidos com tecnologia avançada e formulações especializadas para atender às mais diversas necessidades de limpeza e higienização. Cada produto da marca Harmoniex passa por rigorosos testes de qualidade e eficiência, garantindo resultados superiores em sua categoria.
+
+                A Axyon Clean distribui com orgulho toda a linha Harmoniex, oferecendo produtos que combinam alta performance, segurança e sustentabilidade. Nossa parceria com a Harmoniex garante que você tenha acesso aos melhores produtos de limpeza do mercado, desenvolvidos especificamente para uso profissional e doméstico.
+
+                Entre em contato conosco para conhecer as especificações completas deste produto e descobrir como ele pode otimizar suas rotinas de limpeza, proporcionando resultados excepcionais com máxima eficiência e economia.`,
+                specs: [
+                    { icon: 'fas fa-bottle-water', text: 'Disponível em múltiplas embalagens' },
+                    { icon: 'fas fa-certificate', text: 'Qualidade Harmoniex garantida' },
+                    { icon: 'fas fa-leaf', text: 'Fórmula ambientalmente responsável' },
+                    { icon: 'fas fa-star', text: 'Alta performance comprovada' },
+                    { icon: 'fas fa-shield-check', text: 'Produto seguro e eficaz' },
+                    { icon: 'fas fa-handshake', text: 'Distribuído pela Axyon Clean' },
+                    { icon: 'fas fa-phone', text: 'Suporte técnico especializado' }
+                ]
+            }
+        };
+
+        function openProductModal(productId) {
+            console.log('Abrindo modal para:', productId); // Debug
+            const product = productData[productId];
+            if (!product) {
+                console.error('Produto não encontrado:', productId); // Debug
+                return;
+            }
+
+            // Criar modal se não existir
+            let modal = document.getElementById('product-modal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'product-modal';
+                modal.className = 'product-modal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="modal-title"></h2>
+                            <button class="modal-close" onclick="closeProductModal()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-image-placeholder" id="modal-image">
+                                <i class="fas fa-bottle-water"></i>
+                            </div>
+                            <div class="modal-category" id="modal-category"></div>
+                            <div class="modal-description" id="modal-description"></div>
+                            <div class="modal-specs">
+                                <h3 class="modal-specs-title">
+                                    <i class="fas fa-cogs"></i>
+                                    Especificações Técnicas
+                                </h3>
+                                <div class="modal-specs-list" id="modal-specs-list"></div>
+                            </div>
+                            <a class="modal-whatsapp" id="modal-whatsapp" href="#" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Solicitar via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+
+                // Fechar modal clicando fora
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeProductModal();
+                    }
+                });
+            }
+
+            // Preencher dados do modal
+            document.getElementById('modal-title').textContent = product.title;
+            document.getElementById('modal-category').textContent = product.category;
+            document.getElementById('modal-description').innerHTML = product.description.replace(/\n\s+/g, '<br><br>');
+            
+            // Configurar imagem do modal
+            const modalImage = document.getElementById('modal-image');
+            if (product.image) {
+                modalImage.innerHTML = `<img src="${product.image}" alt="${product.title}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--border-radius);">`;
+                modalImage.className = 'modal-image';
+            } else {
+                modalImage.innerHTML = `<i class="${product.icon}"></i>`;
+                modalImage.className = 'modal-image-placeholder';
+            }
+            
+            const specsList = document.getElementById('modal-specs-list');
+            specsList.innerHTML = product.specs.map(spec => `
+                <div class="modal-spec-item">
+                    <i class="${spec.icon} modal-spec-icon"></i>
+                    <span>${spec.text}</span>
+                </div>
+            `).join('');
+
+            // Configurar WhatsApp
+            const whatsappLink = document.getElementById('modal-whatsapp');
+            const message = `Olá! Gostaria de mais informações sobre o produto: ${product.title}`;
+            whatsappLink.href = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+
+            // Mostrar modal
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('product-modal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Fechar modal com ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeProductModal();
+            }
+        });
+    </script>
+    
+    <script>
