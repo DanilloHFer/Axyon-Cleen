@@ -8,15 +8,19 @@
     <meta name="author" content="Axyon Cleen">
     <title>Axyon Cleen - Limpeza Profissional</title>
     
-    <link rel="icon" type="image/png" href="imagens/logo.png">
-    <link rel="shortcut icon" type="image/png" href="imagens/logo.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- ============= CSS INTEGRADO ============= -->
     <style>
         /* ========== CSS VARIABLES ========== */
         :root {
@@ -966,10 +970,11 @@
     </style>
 </head>
 <body>
+    <!-- Header/Navigation -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                <img src="imagens/logo.png" alt="Axyon Cleen" class="nav__logo-img">
+                <img src="images/logo.png" alt="Axyon Cleen" class="nav__logo-img">
                 <span class="nav__logo-text">Axyon Cleen</span>
             </a>
             
@@ -1000,7 +1005,9 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main class="main">
+        <!-- Home Section -->
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__content">
@@ -1016,7 +1023,7 @@
                             <a href="produtos.html" class="button button__secondary">Nossos Produtos</a>
                         </div>
                     </div>
-                    
+                  
                     <div class="home__stats">
                         <div class="home__stat">
                             <h3>500+</h3>
@@ -1034,15 +1041,16 @@
                 </div>
                 
                 <div class="home__img">
-                    <img src="imagens/hero-cleaning.jpg" alt="Produtos de limpeza profissional" class="home__img-main">
+                    <img src="images/hero-cleaning.jpg" alt="Produtos de limpeza profissional" class="home__img-main">
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section class="about section" id="about">
             <div class="about__container container grid">
                 <div class="about__img">
-                    <img src="imagens/about-us.jpg" alt="Sobre a Axyon Cleen" class="about__img-main">
+                    <img src="images/about-us.jpg" alt="Sobre a Axyon Cleen" class="about__img-main">
                 </div>
                 
                 <div class="about__content">
@@ -1078,6 +1086,7 @@ Para tornar a rotina dos nossos clientes ainda mais prática, contamos com um pl
             </div>
         </section>
 
+        <!-- Services Section -->
         <section class="services section" id="services">
             <div class="services__container container">
                 <h2 class="section__title">Nossos Produtos</h2>
@@ -1239,6 +1248,7 @@ Para tornar a rotina dos nossos clientes ainda mais prática, contamos com um pl
                     </div>
                 </div>
                 
+                <!-- Botão para ver todos os produtos -->
                 <div style="text-align: center; margin-top: 3rem;">
                     <a href="produtos.html" class="button button__primary" style="font-size: 1.125rem; padding: 1.25rem 2rem;">
                         <i class="fas fa-eye"></i>
@@ -1248,6 +1258,7 @@ Para tornar a rotina dos nossos clientes ainda mais prática, contamos com um pl
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section class="contact section" id="contact">
             <div class="contact__container container grid">
                 <div class="contact__content">
@@ -1321,7 +1332,7 @@ Para tornar a rotina dos nossos clientes ainda mais prática, contamos com um pl
                         
                         <div class="contact__form-group">
                             <textarea name="message" class="contact__input contact__textarea" 
-                                        placeholder="Descreva suas necessidades..." rows="5" required></textarea>
+                                    placeholder="Descreva suas necessidades..." rows="5" required></textarea>
                         </div>
                         
                         <button type="submit" class="button button__primary contact__button">
@@ -1334,12 +1345,13 @@ Para tornar a rotina dos nossos clientes ainda mais prática, contamos com um pl
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer__container container grid">
             <div class="footer__content">
                 <div class="footer__group">
                     <a href="#" class="footer__logo">
-                        <img src="imagens/logo.png" alt="Axyon Cleen" class="footer__logo-img">
+                        <img src="images/logo.png" alt="Axyon Cleen" class="footer__logo-img">
                         <span class="footer__logo-text">Axyon Cleen</span>
                     </a>
                     <p class="footer__description">
@@ -1400,10 +1412,12 @@ Para tornar a rotina dos nossos clientes ainda mais prática, contamos com um pl
         </div>
     </footer>
 
+    <!-- Scroll Up Button -->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="fas fa-angle-up scrollup__icon"></i>
     </a>
 
+    <!-- ============= JAVASCRIPT INTEGRADO ============= -->
     <script>
         /*==================== NAVIGATION MENU ====================*/
         const navMenu = document.getElementById('nav-menu');
